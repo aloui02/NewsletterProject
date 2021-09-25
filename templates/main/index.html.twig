@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Acceuil
+{% endblock %}
+
+{% block body %}
+	<hr>
+	<hr>
+	<hr>
+
+	<div class="divhead">
+
+		{% for message in app.flashes('message') %}
+			<div class="text-success">{{ message }}</div>
+		{% endfor %}
+
+
+		<div>
+			<div>
+				<h1>Bienvenue dans notre systeme de gestion de newsletter</h1>
+				<h2>On s'engage ?</h2>
+			</div>
+
+
+			<a class="" href="{{ path('newsletters_home')}}">
+				<button class="button btn-success">Oui</button>
+			</a>
+			<hr>
+			<hr>
+			<div>
+
+				<a class="" href="{{ path('newsletters_prepare')}}">
+					<button  class="button btn-primary">Ajouter Newsletter</button>
+				</a>
+				<a class="" href="{{ path('newsletters_list')}}">
+					<button class="button btn-primary">Afficher Newsletter</button>
+				</a>
+                <a class="" href="{{ path('categories_new')}}">
+					<button class="button btn-primary">Ajouter une Categorie</button>
+				</a>
+
+			</div>
+		</div>
+	</div>
+
+
+	<hr>
+	<hr>
+	<hr>
+{% endblock %}

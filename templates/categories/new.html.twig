@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Categories{% endblock %}
+
+{% block body %}
+   
+
+  
+
+
+    <div class="px-4 py-5 text-center">
+<h1>Creer une nouvelle Categorie</h1>
+    {{ include('categories/_form.html.twig') }}
+    <br>
+<a  href="{{ path('categories_index') }}">Retour à la liste</a>
+    </div>
+    
+
+
+    
+{% endblock %}
